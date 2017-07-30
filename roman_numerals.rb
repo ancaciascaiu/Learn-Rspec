@@ -1,4 +1,4 @@
-def convert_to_roman_numerals(number)
+def convert(number)
   return '' if number == 0
-
+  # return 'I' if number == 1
 end

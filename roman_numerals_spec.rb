@@ -7,9 +7,13 @@ describe 'converting arabic numbers to roman numerals' do
     end
   end
 
-  context '1 is I' do
+  context 'converts numbers according to conversion rules' do
     it 'converts 1 to I' do
       expect(convert(1)).to eq('I')
+    end
+
+    it 'converts 5 to V' do
+      expect(convert(5)).to eq('V')
     end
   end
 end

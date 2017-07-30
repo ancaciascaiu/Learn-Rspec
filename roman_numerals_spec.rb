@@ -15,5 +15,9 @@ describe 'converting arabic numbers to roman numerals' do
     it 'converts 5 to V' do
       expect(convert(5)).to eq('V')
     end
+
+    it 'converts 2 to II' do
+      expect(convert(2)).to eq('II')
+    end
   end
 end

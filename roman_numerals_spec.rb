@@ -7,6 +7,16 @@ describe 'converting arabic numbers to roman numerals' do
     end
   end
 
+  context 'for wrong input' do
+    it 'returns error if input is not an integer' do
+      expect(convert('555')).to eq('Please enter a number!')
+    end
+
+    it 'returns error if input is too large' do
+      expect(convert(10000)).to eq('Please enter an integer < 9999')
+    end
+  end
+
   context 'converts numbers according to conversion rules' do
     it 'converts 1 to I' do
       expect(convert(1)).to eq('I')
@@ -41,11 +51,27 @@ describe 'converting arabic numbers to roman numerals' do
     end
 
     it 'converts 100 to C' do
-      expect(convert(40)).to eq('XL')
+      expect(convert(100)).to eq('C')
     end
 
     it 'converts 90 to XC' do
       expect(convert(90)).to eq('XC')
+    end
+
+    it 'converts 400 to CD' do
+      expect(convert(400)).to eq('CD')
+    end
+
+    it 'converts 500 to D' do
+      expect(convert(500)).to eq('D')
+    end
+
+    it 'converts 900 to CM' do
+      expect(convert(900)).to eq('CM')
+    end
+
+    it 'converts 1000 to M' do
+      expect(convert(1000)).to eq('M')
     end
   end
 end

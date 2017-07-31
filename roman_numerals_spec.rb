@@ -27,5 +27,25 @@ describe 'converting arabic numbers to roman numerals' do
     it 'converts 10 to X' do
       expect(convert(10)).to eq('X')
     end
+
+    it 'converts 9 to IX' do
+      expect(convert(9)).to eq('IX')
+    end
+
+    it 'converts 50 to L' do
+      expect(convert(50)).to eq('L')
+    end
+
+    it 'converts 40 to XL' do
+      expect(convert(40)).to eq('XL')
+    end
+
+    it 'converts 100 to C' do
+      expect(convert(40)).to eq('XL')
+    end
+
+    it 'converts 90 to XC' do
+      expect(convert(90)).to eq('XC')
+    end
   end
 end
